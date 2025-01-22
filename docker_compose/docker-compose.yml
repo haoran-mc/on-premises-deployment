@@ -1,0 +1,16 @@
+
+services:
+  syslog-send:
+    image: haoran232/syslog-send:250121
+    container_name: ran_syslog
+    restart: always
+    ports:
+      - "514:514/udp"
+      - "514:514/tcp"
+
+  minimalist-web-notepad:
+    image: haoran232/minimalist-web-notepad:250122
+    container_name: ran_minimalist_web_notepad
+    restart: always
+    ports:
+      - "9521:9521"
